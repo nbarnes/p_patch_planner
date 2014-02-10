@@ -12,6 +12,7 @@
   <tbody>
     <% @news_posts.each do |news_post| %>
       <tr>
+        <td><%= news_post.title %></td>
         <td><%= link_to 'Show', news_post %></td>
         <td><%= link_to 'Edit', edit_news_post_path(news_post) %></td>
         <td><%= link_to 'Destroy', news_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

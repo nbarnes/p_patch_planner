@@ -53,6 +53,6 @@ class NewsPostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def news_post_params
-      params[:news_post]
+      params.require(:news_post).permit(:title, :body)
     end
 end
