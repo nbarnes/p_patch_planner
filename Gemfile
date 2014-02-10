@@ -15,9 +15,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Make Minitest generally available for Heroku deploy
-gem 'minitest-rails'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -27,12 +24,10 @@ group :production do
 end
 
 group :development, :test do
-# More minitest
-  gem 'minitest'
-  gem 'minitest-focus'
-  gem 'minitest-colorize'
+# Rspec
+  gem "rspec-rails"
 # Capybara
-  gem 'minitest-rails-capybara'
+  gem 'capybara'
   gem 'launchy'
 # pry inline debugger
   gem 'pry-rails'
