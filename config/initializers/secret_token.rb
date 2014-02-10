@@ -9,4 +9,9 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PPatchPlanner::Application.config.secret_key_base = '99a04f9bf5ae5892857b2286bbca28652e234223b8e1a755896de28f77a497b291bac83bada4cf64e3da2b10c59a54349d09fb03861f0c8c79c39dc6aa1e8fd4'
+
+PPatchPlanner::Application.config.secret_key_base = if Rails.env.development? || Rails.env.test?
+    ('x' * 30) # meets minimum requirement of 30 chars long
+  else
+    ENV['RAILS_SECRET_KEY_BASE']
+  end
