@@ -14,6 +14,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Use omniauth to login through twitter
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'bcrypt-ruby'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -35,6 +39,7 @@ group :development, :test do
   gem 'pry-doc'
 # Figaro for removing secret keys from github
   gem 'figaro'
+  gem 'simplecov', :require => false
 end
 
 group :doc do
