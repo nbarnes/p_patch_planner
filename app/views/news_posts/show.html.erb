@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+  <h1><%= @news_post.title %></h1>
+  <div><%= @news_post.body %></div>
+
 <%= link_to 'Edit', edit_news_post_path(@news_post) %> |
 <%= link_to 'Back', news_posts_path %>
