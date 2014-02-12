@@ -5,6 +5,6 @@ PPatchPlanner::Application.routes.draw do
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match "/auth/twitter/callback" => "sessions#create", via: [:get, :post]
-  match "/signout" => "sessions#destroy", :as => :signout,            via: 'destroy'
+  match "/signout" => "sessions#destroy", :as => :signout,            via: 'delete'
 
 end
