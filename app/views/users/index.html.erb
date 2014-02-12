@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing users</h1>
+
+
+<% @users.each do |user| %>
+  Username: <%= link_to user.name, user %>
+  </br>
+  Email: <%= user.email %>
+  </br></br>
+<% end %>
+
+<br>
+
+<%= link_to 'Front page', root_path %>
