@@ -23,6 +23,8 @@ gem 'bcrypt-ruby'
 gem 'turbolinks'
 
 gem 'forecast_io'
+# Policies (authorization system)
+gem 'pundit'
 
 group :production do
   # Heroku requirement
