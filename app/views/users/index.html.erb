@@ -3,13 +3,12 @@
 <h1>Listing users</h1>
 
 <% @users.each do |user| %>
-  Username: <%= link_to user.name, user %> </br>
-  Email: <%= user.email %> </br>
-  Provider: <%= user.provider %> </br>
-  UID: <%= user.uid %> </br>
-  </br>
+  <br/>
+  <%= render "partials/user", user: user %>
+  <%= link_to 'Edit', edit_user_path(user) %>
+  <br/>
 <% end %>
 
-<br>
+<br/>
 
 <%= link_to 'Front page', root_path %>

@@ -18,6 +18,8 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'bcrypt-ruby'
+# Email
+gem 'postmark'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

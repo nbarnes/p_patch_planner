@@ -96,6 +96,9 @@ GEM
       omniauth-oauth (~> 1.0)
     pg (0.17.0)
     polyglot (0.3.3)
+    postmark (1.0.1)
+      json
+      rake
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -200,6 +203,7 @@ DEPENDENCIES
   omniauth
   omniauth-twitter
   pg
+  postmark
   pry-debugger
   pry-doc
   pry-rails

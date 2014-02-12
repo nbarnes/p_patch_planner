@@ -9,13 +9,17 @@
     <div class="alert alert-<%= key %>"><%= value %></div><br>
   <% end %>
 
-  Current weather: <b><%= @forecast %></b> </br>
+  <div id='weather_display'>Current weather: <b><%= @forecast %></b></div>
+  <br/>
 
   <div>
     <% @news_posts.each do |news_post| %>
       <%= render "partials/news_post", news_post: news_post %>
     <% end %>
   </div>
+
+  <%= link_to 'News Posts Index', news_posts_path %> <br/>
+  <%= link_to 'Users Index', users_path %>
 
 </div>
 

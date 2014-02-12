@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+  <h3>Change email:</h3>
   <%= render partial: "partials/user", locals: {user: @user} %>
   <br/>
+  <%= render 'form' %>
+  <br/>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -22,9 +22,9 @@ class NewsPostsController < ApplicationController
   # POST /news_posts
   def create
     @news_post = NewsPost.new(news_post_params)
-
     if @news_post.save
       redirect_to @news_post, notice: 'News post was successfully created.'
+      send_notifications_of_new_post(@news_post)
     else
       render action: 'new'
     end
@@ -45,6 +45,11 @@ class NewsPostsController < ApplicationController
     redirect_to news_posts_url, notice: 'News post was successfully destroyed.'
   end
 
+  def send_notifications_of_new_post(news_post)
+    console.log('send_notifications_of_new_post start')
+    client = Postmark::ApiClient.new(your_api_key)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_news_post
@@ -55,4 +60,5 @@ class NewsPostsController < ApplicationController
     def news_post_params
       params.require(:news_post).permit(:title, :body)
     end
+
 end
