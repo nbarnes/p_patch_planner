@@ -4,10 +4,11 @@
 
 
 <% @users.each do |user| %>
-  Username: <%= link_to user.name, user %>
+  Username: <%= link_to user.name, user %> </br>
+  Email: <%= user.email %> </br>
+  Provider: <%= user.provider %> </br>
+  UID: <%= user.uid %> </br>
   </br>
-  Email: <%= user.email %>
-  </br></br>
 <% end %>
 
 <br>

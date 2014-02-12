@@ -2,6 +2,8 @@
 
   <div>Name: <%= @user.name %></div>
   <div>Email: <%= @user.email %></div>
+  <div>Provider: <%= @user.provider %></div>
+  <div>UID: <%= @user.uid %></div>
   </br>
 
 <%= link_to 'Edit', edit_user_path(current_user.name) %> |
