@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
   def home
     @forecast = get_weather
+    @news_posts = NewsPost.all
   end
 
   def get_weather

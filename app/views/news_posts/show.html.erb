@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-  <div>Title: <%= @news_post.title %></div>
-  <div>Body: <%= @news_post.body %></div>
+<%= render partial: "partials/news_post", locals: {news_post: @news_post} %>
 
 <%= link_to 'Edit', edit_news_post_path(@news_post) %> |
 <%= link_to 'Back', news_posts_path %>

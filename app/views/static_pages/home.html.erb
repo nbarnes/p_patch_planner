@@ -9,10 +9,12 @@
     <div class="alert alert-<%= key %>"><%= value %></div><br>
   <% end %>
 
-  <%= @forecast %>
+  Current weather: <b><%= @forecast %></b> </br>
 
   <div>
-    <%= link_to "What's new in news", news_posts_path %>
+    <% @news_posts.each do |news_post| %>
+      <%= render "partials/news_post", news_post: news_post %>
+    <% end %>
   </div>
 
 </div>
