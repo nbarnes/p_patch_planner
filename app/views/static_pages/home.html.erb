@@ -5,6 +5,10 @@
     This is the home page for the P Patch Planner.
   </h2>
 
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div><br>
+  <% end %>
+
   <%= @forecast %>
 
   <div>
