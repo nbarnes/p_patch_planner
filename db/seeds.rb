@@ -10,6 +10,7 @@ User.create(name: 'Jaegerin', email: 'old_grey_mare@tabarah.org', uid: '423', pr
 User.create(name: 'Orion', email: 'doomfluff@tabarah.org', uid: '324', provider: 'twitter')
 User.create(name: 'Dottie', email: 'pulletinside@tabarah.org', uid: '332', provider: 'twitter')
 User.create(name: 'admin', email: 'admin@unofficialtrakehnerdatabase.com', uid: '1947861475', provider: 'twitter')
+User.create(name: 'nbarnes', email: 'nbarnes@gmail.com', uid: '393838220', provider: 'twitter')
 
 NewsPost.create(title: 'P-Patch open!', body: 'Our new p-patch is open!  Come and see!')
 NewsPost.create(title: 'Coming soon!', body: "Soon we'll have our new p-patch!  Get your shovels ready!")
