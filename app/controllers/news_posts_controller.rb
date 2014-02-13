@@ -46,8 +46,12 @@ class NewsPostsController < ApplicationController
   end
 
   def send_notifications_of_new_post(news_post)
-    console.log('send_notifications_of_new_post start')
-    client = Postmark::ApiClient.new(your_api_key)
+    Rails.logger.debug('BOB KEEPS IT COOL')
+
+    users = User.where("email IS NOT NULL")
+    users.each do |user|
+      NewsPostMailer.new_news_post_email(user).deliver
+    end
   end
 
   private
