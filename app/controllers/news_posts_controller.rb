@@ -38,6 +38,7 @@ class NewsPostsController < ApplicationController
 
     respond_to do |format|
       if @news_post.save
+        send_notifications_of_new_post(@news_post)
         format.html { redirect_to @news_post, notice: 'News post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @news_post }
       else
