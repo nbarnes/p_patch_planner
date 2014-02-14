@@ -38,9 +38,8 @@ class NewsPostsController < ApplicationController
 
     respond_to do |format|
       if @news_post.save
-        current_user.news_post << @news_post
         format.html { redirect_to @news_post, notice: 'News post was successfully created.' }
-        format.json { render json: @news_post, status: :created, location: @news_post }
+        format.json { render action: 'show', status: :created, location: @news_post }
       else
         format.html { render action: 'new' }
         format.json { render json: @news_post.errors, status: :unprocessable_entity }
@@ -50,8 +49,6 @@ class NewsPostsController < ApplicationController
 
   # PATCH/PUT /news_posts/1
   def update
-    @news_post = NewsPost.find(params[:id])
-
     respond_to do |format|
       if @news_post.update(news_post_params)
         format.html { redirect_to @news_post, notice: 'News post was successfully updated.' }
@@ -65,7 +62,6 @@ class NewsPostsController < ApplicationController
 
   # DELETE /news_posts/1
   def destroy
-    @news_post = NewsPost.find(params[:id])
     authorize @news_post
     @news_post.destroy
 
