@@ -1,7 +1,7 @@
 
 class NewsPostMailer < ActionMailer::Base
 
-  default from: 'updates@p-patch.com'
+  default from: 'p.patch.no.reply@gmail.com'
 
   def new_news_post_email(user)
     @user = user
