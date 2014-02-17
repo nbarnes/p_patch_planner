@@ -7,7 +7,12 @@ class StaticPagesController < ApplicationController
 
   def get_weather
     ForecastIO.api_key = '397e8622e11de93eb5f721bc5cd12c13'
-    ForecastIO.forecast(47.6097, 122.3331).currently.summary
+    forecast = ForecastIO.forecast(47.6097, 122.3331)
+    if forecast
+      forecast.currently.summary
+    else
+      "< FORECAST DATA UNAVAILABLE >"
+    end
   end
 
 end
