@@ -15,6 +15,12 @@
   <div>
     <% @news_posts.each do |news_post| %>
       <%= render "partials/news_post", news_post: news_post %>
+
+      <div>
+        <%= link_to "Comments", news_post_path(news_post, anchor: 'disqus_thread'), :class => "post_comments_link" %>
+      </div>
+
+      <br/>
     <% end %>
   </div>
 
